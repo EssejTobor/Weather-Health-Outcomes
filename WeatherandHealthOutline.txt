@@ -1,0 +1,113 @@
+# Project Title
+​
+# Weather and Health 
+In [ ]:
+
+# Our Question
+​
+# We wanted to explore whether the weather in the top ten US cities by population 
+# have an impact on the health of the population living there, 
+# as measured in suicide rates and obesity rates per capita. 
+​
+In [ ]:
+
+# Methods 
+​
+# We are obtaining historical weather data from the OpenWeather api for the top 10 US Cities.
+# Weather is also available on a state by state basis. 
+# Suicide Data was pulled from the FBI and Obesity Data from the CDC. 
+# Suicide and obesity were selected due to the availability of data as well as the fact 
+# that we wanted to use at least two health metrics to explore this question. 
+In [ ]:
+
+# Challenges 
+​
+# Obtaining the data in the desired format via APIs was a bit of a challenge.
+# The years the data was pulled form needed to match up for us to be able to draw conclusions
+# Since we were using multiple sources, not all of them had data available for the same years so 
+# needed to tailor our plan accordingly. 
+
+Proposal 
+
+Weather/Health Outcomes 
+
+For this project, we will explore the impact of weather on health outcomes across various geographical locations. 
+
+Specifically, we will look at whether a relationship exists between weather and three health outcomes: 
+
+1. Suicide Rates 
+2. Mental Health*
+3. Obesity 
+
+*Need to define/quantify- depression and drug abuse rates 
+
+Our goal is to find out whether a correlation exists between weather (sunny days, rainy days, cold days) and physical health across the US Population. 
+
+We plan to divide the US into regions. 
+
+Resources we plan to use include (but are not limited to):  
+
+1. dashboard.health.gov 
+2. The CDC 
+3. The US Census 
+4. OpenWeatherAPI 
+
+Definitions 
+Assignment of roles 
+Workflow 
+Pull Data 
+Print stuff 
+Data source 
+Pull Data
+Store 
+Clean Data
+Analyze 
+Draw Conclusions 
+Make Presentation 
+Present 
+
+Git
+Repository 
+Helps you store and retrieve projects 
+3 things you need- code, message, repository location 
+
+Definitions 
+How are we looking at weather locations 
+1. US Only
+2. Cloudiness/Sunniness Category 
+3. Precipitation Category 
+4. Temperature 
+5. Humidity 
+6. All measurements are in F/inches 
+7. Time period at least 5 years AVERAGE 
+
+Pull data per state 
+1. Weather data- per state as stated above 
+2. Suicide rates - for each state per capita 
+3. Health data- for each state obesity per capita 
+4. Health data- mental health* per capita 
+
+Jesse- Health data- exploratory to see what’s out there 
+Laura - Pull weather data per state 
+Alicia- Census data 
+
+Goal: by Wednesday- be able to discuss more, by Saturday have the CSV files 
+
+Does the weather in the top ten US cities by population  impact the health of the population, as measured in suicide rates and obesity rates per capita 
+
+Goal: 
+Laura- weather data for top 10 cities by Saturday 
+Jesse and Alicia - FBI data for suicide rates and violence, cdc or other api source for obesity rates 
+
+All rates per capita 
+
+Years of health data to match up with weather data for the graphs 
+
+Workflow: 
+Have data from API into JSON or CSV files ready for Saturday 
+We will clean data and play around with how it could graph 
+Get any additional data needed to answer our question 
+ 
+Monday
+Look at ways of presenting
+Finalize and do run-through of our presentation 
