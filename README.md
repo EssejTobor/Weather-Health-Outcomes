@@ -14,7 +14,7 @@ Our goal was to find out whether a correlation exists between weather (sunny/rai
 and the mental and physical health across this US Population.
 
 
-Resources used included:  
+Resources used include:  
 The CDC
 The US Census
 OpenWeatherAPI
