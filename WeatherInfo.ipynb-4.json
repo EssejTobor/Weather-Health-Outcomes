@@ -1,0 +1,119 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#This was used to get the final dataframe\n",
+    "# Dependencies\n",
+    "import csv\n",
+    "import matplotlib.pyplot as plt\n",
+    "import openweathermapy as ow\n",
+    "import pandas as pd\n",
+    "import numpy as np "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "weather_df = pd.read_csv (r'/Users/lauraehallaman/Documents/GitHub/Weather-Health-Outcomes/WeatherInfo.csv')\n",
+    "weather_df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "weather_df=weather_df.fillna(0)\n",
+    "weather_df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "weather_df.to_csv(\"/Users/lauraehallaman/Desktop/Project1/Weather-Health-Outcomes/Philly2016.csv\", encoding=\"utf-8\", index=False, header=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [],
+   "source": [
+    "all_df = weather_df.loc[:,[\"City Name\",\"Year\",\"Temperature\",\"Snow 24h\",\"Clouds All\"]].groupby([\"City Name\",\"Year\"]).agg({\"Temperature\":\"mean\",\"Snow 24h\":\"sum\",\"Clouds All\":\"mean\"})\n",
+    "all_df.head(100)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "year = all_df[\"Year\"]\n",
+    "city = all_df[\"City Name\"]\n",
+    "temperature = all_df[\"Temperature\"]\n",
+    "total_snow = all_df[\"Snow 24h\"]\n",
+    "clouds = all_df[\"Clouds All\"]\n",
+    "\n",
+    "summary_df = pd.DataFrame({\n",
+    "    \"Year\" : year,\n",
+    "    \"City\" : city,\n",
+    "    \"Temperature\" : temperature,\n",
+    "    \"Total Snow\" : total_snow,\n",
+    "    \"Cloudiness\": clouds\n",
+    "})\n",
+    "summary_df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "all_df.to_csv(\"/Users/lauraehallaman/Desktop/Project1/Weather-Health-Outcomes/AllDf.csv\", encoding=\"utf-8\", index=False, header=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
