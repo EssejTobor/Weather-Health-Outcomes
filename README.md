@@ -18,3 +18,5 @@ Resources used include:
 The CDC
 The US Census
 OpenWeatherAPI
+
+Authored by: Alicia Bonds, Laura Hallaman, and Jesse Kowalcic
